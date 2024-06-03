@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+        <!--=============== REMIX ICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="stylesheet" href="assets/css/proyects.css">
+
+
+        <title>Portafolio -Business Intelligence Analyst- Silvana Guardia</title>
+    </head>
+    <body>
+
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="file:///C:/Users/PC/Desktop/PROYECTOS-SIL/ANALISTA%20DE%20DATOS/index.html#about" class="nav__logo">
+                    <i class="ri-bar-chart-2-fill"></i> Silvana.G
+                </a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">               
+
+                            <a href="#home" class="nav__link active-link" onclick="location.href='index.html'">Inicio</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="file:///C:/Users/PC/Desktop/PROYECTOS-SIL/ANALISTA%20DE%20DATOS/index.html#about" class="nav__link" onclick="location.href='index.html'">Sobre mí </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="file:///C:/Users/PC/Desktop/PROYECTOS-SIL/ANALISTA%20DE%20DATOS/index.html#skills" class="nav__link" onclick="location.href='index.html'">Skills</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="file:///C:/Users/PC/Desktop/PROYECTOS-SIL/ANALISTA%20DE%20DATOS/index.html#portfolio" class="nav__link">Portafolio</a>
+                        </li>
+                    </ul>
+                                     
+                    <div class="nav__close" id="nav-close">
+                        <i class="ri-close-circle-fill"></i>
+                    </div>
+                </div>
+
+                <div class="nav__btns">
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-layout-grid-fill"></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+
+        <!--==================== PROYECTO ====================-->
+        <section class="proyect container section">
+            <div class="container content">
+                <h2 class="proyect__title">Analisis de Datos</h2>
+                <p class="proyect__info">
+                    La información recolectada por la empresa de retail se encuentra en un archivo CSV (zara.csv). <br>
+                    En este proyecto utilizaremos Python, Pandas, entre otras librerias, comenzaremos por la 
+                    limpieza de datos, y terminaremos en el analisis, este set de datos con 352 filas y 16 columnas. <br> 
+                    El objetivo de este análisis es saber que productos fueron los mas vendidos. 
+                </p>
+                <a href="https://colab.research.google.com/drive/https://github.com/SilvanaGuardia/AnalisisDeVentasZara?usp=sharing" class="button__proyect">
+                    Ver más<i class="ri-arrow-right-up-fill"></i>
+                </a>  
+            </div>
+
+            <div class="proyect__bg">
+                <div class="proyect__container grid">
+                    <div class="proyect__card">
+                        <h4 class="proyect__card-title">1. Limpieza de datos</h4>
+                        <p class="proyect_card-description">
+                            Conectamos drive, importamos librerias,y revisamos la data, tenemos 252 filas y 16 columnas
+                            Veremos la descripción de las columnas, sus valores y sus nombres
+                            Tenemos 0 Duplicados, renombraremos columnas, reemplazo de secciones, conteo de niveles.
+                            Verefiquemos las comunas númericas. 
+                        </p>                    
+                    </div>  
+
+                    <div class="proyect__card scroll">
+                        <p class="proyect_card-description-code">
+                            from google.colab import drive
+                            drive.mount('/content/drive')
+                        </p> 
+                        <p class="proyect_card-description-code">
+                            import pandas as pd
+                            import numpy as np
+                            import matplotlib.pyplot as plt
+                            import seaborn as sns
+                        </p>      
+                        <p class="proyect_card-description-code">
+                            data = pd.read_csv("/content/drive/MyDrive/Zara Sales/zara.csv", sep = ';')
+                        </p>       
+                        <p class="proyect_card-description-code">
+                            print(data.shape)
+                            data.head()
+                        </p>                         
+                        <p class="proyect_card-description-code">
+                            data.info()
+                        </p>
+                        <p class="proyect_card-description-code">
+                            Index(['Product ID', 'Product Position', 'Promotion', 'Product Category',
+                            'Seasonal', 'Sales Volume', 'brand', 'url', 'sku', 'name',
+                            'description', 'price', 'currency', 'scraped_at', 'terms', 'section'],
+                            dtype='object')
+                        </p>  
+                        <p class="proyect_card-description-code">
+                            data.duplicated().sum()   
+                        </p>                                                                                                                                                                
+                    </div> 
+                </div>
+            </div>
+
+            <div class="proyect__bg">
+                <div class="proyect__container grid">
+                    <div class="proyect__card">
+                        <h4 class="proyect__card-title">2. Analizar datos</h4>
+                        <p class="proyect_card-description">
+                            Validamos cuales son las categorias de productos mas vendidos, 
+                            el volumen de ventas, que genero realizo mas compras, relacionamos precio con volumen de ventas, 
+                            que ubicación de productos dio mas ventas. 
+                        </p>     
+                    </div>  
+
+                    <div class="proyect__card scroll">
+                        <p class="proyect_card-description-code">
+                            data['Total_Price'] = data['Price'] * data['Sales_Volume']
+                        </p>
+                        <p class="proyect_card-description-code">
+                            pd.DataFrame(data.groupby("Product_Position")["Sales_Volume"].sum())
+                        </p>                         
+                        <p class="proyect_card-description-code">
+                            pd.DataFrame(data.groupby("Section")["Total_Price"].sum())
+                        </p>  
+                        <p class="proyect_card-description-code">
+                            Productos = data["Terms"]
+                            Costo = data["Total_Price"]
+                            plt.figure(figsize=(10, 6))
+                            plt.title("Productos más vendidos")
+                            sns.barplot(x=Terms, y=Total_Price)
+                            plt.xlabel("Terms")
+                            plt.ylabel("Total_Price")
+                            plt.xticks(rotation=90)
+                            plt.show()
+                        </p> 
+                        <p class="proyect_card-description-code">
+                            sns.countplot(data=data,x='Terms', hue='Section')
+                            plt.show()
+                        </p>     
+                        <p class="proyect_card-description-code">
+                            pd.DataFrame(data.groupby("Product_Position")["Total_Price"].sum())
+                        </p>  
+                        <p class="proyect_card-description-code">
+                            least_sold_product = data.groupby("Terms")["Total_Price"].sum().sort_values().index[0]
+                            print(f"Least sold product: {least_sold_product}")
+                        </p>                                                                                                                                                                                                                               
+                    </div> 
+                </div>
+            </div>  
+
+            <div class="proyect__bg">
+                <div class="">
+                    <div class="">
+                        <h4 class="proyect__card-title">3. Visualización de datos</h4>
+                        <p class="proyect_card-description">
+                            Aquí veremos la respuestas a las preguntas que realizamos en 
+                            el analisis de datos.  
+                        </p>     
+                    </div>
+                </div>
+            </div> 
+
+            <div class="proyect__bg">
+                <div class="proyect__img grid">
+                    <img src="assets/img/barras.png" alt="" class="img-grafic">
+                    <img src="assets/img/barras-2.png" alt="" class="img-grafic">
+                    <img src="assets/img/pie.png" alt="" class="img-grafic">
+                    <img src="assets/img/puntos.png" alt="" class="img-grafic">
+                </div>
+            </div>                                    
+        </section>
+
+
+
+
+
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer">
+            <p class="footer__copy">Copyright © 2023 Silvana Guardia Z. | Analista de datos</p>
+        </footer>
+
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up"> 
+            <i class="ri-arrow-up-fill scrollup__icon"></i>
+        </a>
+
+        <!--=============== SCROLL REVEAL ===============-->
+        <script src="assets/js/scrollreveal.min.js"></script>
+        
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

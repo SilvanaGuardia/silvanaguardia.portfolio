@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+        <!--=============== REMIX ICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="stylesheet" href="assets/css/proyects.css">
+
+
+        <title>Portafolio -Business Intelligence Analyst- Silvana Guardia</title>
+    </head>
+    <body>
+
+        <!--==================== HEADER ====================-->
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="file:///C:/Users/PC/Desktop/PROYECTOS-SIL/ANALISTA%20DE%20DATOS/index.html#about" class="nav__logo">
+                    <i class="ri-bar-chart-2-fill"></i> Silvana.G
+                </a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">               
+
+                            <a href="#home" class="nav__link active-link" onclick="location.href='index.html'">Inicio</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="file:///C:/Users/PC/Desktop/PROYECTOS-SIL/ANALISTA%20DE%20DATOS/index.html#about" class="nav__link" onclick="location.href='index.html'">Sobre mí </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="file:///C:/Users/PC/Desktop/PROYECTOS-SIL/ANALISTA%20DE%20DATOS/index.html#skills" class="nav__link" onclick="location.href='index.html'">Skills</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="file:///C:/Users/PC/Desktop/PROYECTOS-SIL/ANALISTA%20DE%20DATOS/index.html#portfolio" class="nav__link">Portafolio</a>
+                        </li>
+                    </ul>
+                                     
+                    <div class="nav__close" id="nav-close">
+                        <i class="ri-close-circle-fill"></i>
+                    </div>
+                </div>
+
+                <div class="nav__btns">
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-layout-grid-fill"></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        
+        <!--==================== PROYECTO ====================-->
+        <section class="proyect container section">
+            <div class="container content">
+                <h2 class="proyect__title">Proyecto de Top Spotify</h2>
+                <p class="proyect__info">Este proyecto lo realice con excel para la limpieza de Datos
+                    y Tableau para el Dashboard. <br>
+                    Tenemos una base de datos con 952 filas y 25 columnas. <br>
+                    Visualizar cuales son las canciones mas escuchadas, 
+                    que artistas fueron top en el 2023. 
+                </p>
+                <a href="https://public.tableau.com/views/Popular_Spotify_Songs/Dashboard?:language=es-ES&:sid=&:display_count=n&:origin=viz_share_link" class="button__proyect">
+                    Ver más<i class="ri-arrow-right-up-fill"></i>
+                </a>                  
+            </div>
+
+            <div class="proyect__bg">
+                <div class="proyect__container grid">
+                    <div class="proyect__card">
+                        <h4 class="proyect__card-title">Limpieza de Datos</h4>
+                        <p class="proyect_card-description">
+                            Realizamos la limpieza de Datos con Excel, 
+                            validamos que no tenemos duplicados, 
+                            investigamos nombres de las canciones y los completamos
+                        </p>
+                    </div>  
+
+                    <div class="proyect__card">
+                        <p class="proyect_card-description-code">
+                            Se corríge con Nompropio()
+                        </p>
+                        <p class="proyect_card-description-code">
+                            Se alidan duplicados, tenemos 0.
+                        </p>
+                        <p class="proyect_card-description-code">
+                            Se corrigen titulos de canciones que contenían simbolos
+                        </p>                                                                        
+                    </div>         
+                </div>
+            </div>
+            <div class="proyect__bg">
+                <img src="assets/img/tableau.png" alt="" class="img-proyect">
+            </div>            
+        </section>
+  
+  
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer">
+            <p class="footer__copy">Copyright © 2023 Silvana Guardia Z. | Analista de datos</p>
+        </footer>
+
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up"> 
+            <i class="ri-arrow-up-fill scrollup__icon"></i>
+        </a>
+
+        <!--=============== SCROLL REVEAL ===============-->
+        <script src="assets/js/scrollreveal.min.js"></script>
+        
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

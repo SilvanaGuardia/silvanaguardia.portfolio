@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+        <!--=============== REMIX ICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="stylesheet" href="assets/css/proyects.css">
+
+        <title>Portafolio -Business Intelligence Analyst- Silvana Guardia</title>
+    </head>
+    <body>
+
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="file:///C:/Users/PC/Desktop/PROYECTOS-SIL/ANALISTA%20DE%20DATOS/index.html#about" class="nav__logo">
+                    <i class="ri-bar-chart-2-fill"></i> Silvana.G
+                </a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">               
+
+                            <a href="#home" class="nav__link active-link" onclick="location.href='index.html'">Inicio</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="file:///C:/Users/PC/Desktop/PROYECTOS-SIL/ANALISTA%20DE%20DATOS/index.html#about" class="nav__link" onclick="location.href='index.html'">Sobre mí </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="file:///C:/Users/PC/Desktop/PROYECTOS-SIL/ANALISTA%20DE%20DATOS/index.html#skills" class="nav__link" onclick="location.href='index.html'">Skills</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="file:///C:/Users/PC/Desktop/PROYECTOS-SIL/ANALISTA%20DE%20DATOS/index.html#portfolio" class="nav__link">Portafolio</a>
+                        </li>
+                    </ul>
+                                     
+                    <div class="nav__close" id="nav-close">
+                        <i class="ri-close-circle-fill"></i>
+                    </div>
+                </div>
+
+                <div class="nav__btns">
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-layout-grid-fill"></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        
+        <!--==================== PROYECTO ====================-->
+        <section class="proyect container section">
+            <div class="container content">
+                <h2 class="proyect__title">Proyecto de Limpieza de Datos con SQL</h2>
+                <p class="proyect__info">En este proyecto he preparado la base para su respectivo análisis, validando duplicados, se corrigieron los formatos. Conjunto de datos de Recursos Humanos, contiene 311 registros.</p>
+                <a href="https://github.com/SilvanaGuardia/Limpieza-de-Datosardia.t.me/" class="button__proyect">
+                    Ver más<i class="ri-arrow-right-up-fill"></i>
+                </a>  
+            </div>
+
+            <div class="proyect__bg">
+                <div class="proyect__container grid">
+                    <div class="proyect__card">
+                        <h4 class="proyect__card-title">Primera vista a la Base</h4>
+                        <p class="proyect_card-description">
+                            Lo Primero que temos que hacer es crear nuestra tabla, 
+                            importamos la data que previmanete descargamos de Kaggle, 
+                            revisamos la muestra para validar datos.
+                        </p>
+                        <p class="proyect_card-description">
+                            Crearemos un store procedure para facilitarnos las cosas
+                        </p>                        
+                    </div>  
+
+                    <div class="proyect__card scroll">
+                        <p class="proyect_card-description-code">
+                            CREATE DATABASE clean_data;
+                        </p> 
+                        <p class="proyect_card-description-code">
+                            USE clean_data;
+                        </p>  
+                        <p class="proyect_card-description-code">
+                            SELECT * FROM hrdataset LIMIT 10;
+                        </p>       
+                        <p class="proyect_card-description-code">
+                            DELIMITER //
+                            CREATE PROCEDURE info()
+                                BEGIN
+                                    SELECT * FROM hrdataset;
+                                END //
+                            DELIMITER ; 
+
+                            CALL info;
+                        </p>                                                                                                                                            
+                    </div>  
+                                     
+                </div>
+            </div>
+            <div class="proyect__bg">  
+                <div class="proyect__container grid">
+                    <div class="proyect__card">
+                        <h4 class="proyect__card-title">Validemos Columnas</h4>
+                        <p class="proyect_card-description">
+                            1. Renombrar Columnas. <br>
+                            2. Dividir Apellidos y Nombres en columnas diferentes. <br>
+                            3. Ordenamos lugar de las Columnas. <br>
+                            4. Eliminar tablar inservibles. 
+                        </p>
+                        <p class="proyect_card-description">
+                        </p>                        
+                    </div>  
+
+                    <div class="proyect__card scroll">
+                        <p class="proyect_card-description-code">
+                            ALTER TABLE hrdataset CHANGE COLUMN `ï»¿EmpID` ID varchar(20) null;
+                        </p> 
+                        <p class="proyect_card-description-code">
+                            SELECT ID,
+                                SUBSTRING_INDEX(Employee_Name, ',', 1) AS First_Name,
+                                TRIM(SUBSTRING_INDEX(Employee_Name, ',', -1)) AS Last_Name,
+                                LOCATE(',',Employee_Name) AS Nombres
+                            FROM hrdataset;
+
+                            SELECT ID,
+                                SUBSTRING(Employee_Name, 1, LOCATE(',', Employee_Name) - 1) AS Last_Name,
+                                TRIM(SUBSTRING(Employee_Name, LOCATE(',', Employee_Name) + 1)) AS First_Name
+                            FROM hrdataset;                        
+                        </p>  
+                        <p class="proyect_card-description-code">
+                            ALTER TABLE hrdataset MODIFY COLUMN Last_Name VARCHAR(255) AFTER ID;
+                            ALTER TABLE hrdataset MODIFY COLUMN First_Name VARCHAR(255) AFTER Last_Name;
+                        </p>       
+                        <p class="proyect_card-description-code">
+                            ALTER TABLE hrdataset DROP COLUMN Employee_Name;
+                        </p>                                                                                                                                                                                      
+                    </div>                                       
+                </div>
+            </div>  
+            <div class="proyect__bg">   
+                <div class="proyect__container grid">
+                    <div class="proyect__card">
+                        <h4 class="proyect__card-title">Validar Duplicados</h4>
+                        <p class="proyect_card-description">
+                            No tenemos duplicados
+                        </p>                      
+                    </div>  
+
+                    <div class="proyect__card scroll">
+                        <p class="proyect_card-description-code">
+                            SELECT ID, COUNT(*) AS cantidad_duplicados
+                            FROM hrdataset
+                            GROUP BY ID  
+                            HAVING COUNT(*) > 1;                            
+                        </p>                                                                                                                                                                                    
+                    </div>                                       
+                </div>            
+            </div> 
+            <div class="proyect__bg">   
+                <div class="proyect__container grid">
+                    <div class="proyect__card">
+                        <h4 class="proyect__card-title">Cambiar datos</h4>
+                        <p class="proyect_card-description">
+                            Reemplazaremos datos de una celda
+                        </p>                      
+                    </div>  
+
+                    <div class="proyect__card scroll">
+                        <p class="proyect_card-description-code">
+                            UPDATE hrdataset
+                            SET GenderID = REPLACE(GenderID, 'M', 'Male');
+                            UPDATE hrdataset
+                            SET GenderID = REPLACE(GenderID, 'F', 'Female');
+                        </p>                                                                                                                                                                                    
+                    </div>                                       
+                </div>            
+            </div>               
+            <div class="proyect__bg">   
+                <div class="proyect__container grid">
+                    <div class="proyect__card">
+                        <h4 class="proyect__card-title">Formato de Fecha</h4>
+                        <p class="proyect_card-description">
+                            Cambiaremos el formato de las comunas que contienen fechas.
+                        </p>                      
+                    </div>  
+
+                    <div class="proyect__card scroll">
+                        <p class="proyect_card-description-code">
+                            SELECT birth_date FROM hrdataset;
+
+                            ALTER TABLE hrdataset MODIFY COLUMN birth_date date;
+
+                            SELECT birth_date, CASE
+                                WHEN birth_date LIKE '%/%' THEN DATE_FORMAT(STR_TO_DATE(birth_date, '%m/%d/%Y'), '%Y-%m-%d')
+                                WHEN birth_date LIKE '%-%' THEN DATE_FORMAT(STR_TO_DATE(birth_date, '%m-%d-%Y'), '%Y-%m-%d')
+                                ELSE NULL
+                            END AS new_birth_date
+                            FROM hrdataset;
+
+                            UPDATE hrdataset
+                            SET birth_date = CASE
+                                WHEN birth_date LIKE '%/%' THEN date_format(str_to_date(birth_date, '%m/%d/%Y'),'%Y-%m-%d')
+                                WHEN birth_date LIKE '%-%' THEN date_format(str_to_date(birth_date, '%m-%d-%Y'),'%Y-%m-%d')
+                                ELSE NULL
+                            END;                           
+                        </p> 
+                        <p class="proyect_card-description-code">
+                            SELECT DateofHire FROM hrdataset;
+
+                            SELECT DateofHire, CASE
+                                WHEN DateofHire LIKE '%/%' THEN DATE_FORMAT(STR_TO_DATE(DateofHire, '%m/%d/%Y'), '%Y-%m-%d')
+                                WHEN DateofHire LIKE '%-%' THEN DATE_FORMAT(STR_TO_DATE(DateofHire, '%m-%d-%Y'), '%Y-%m-%d')
+                                ELSE NULL
+                            END AS new_DateofHire
+                            FROM hrdataset;
+
+                            UPDATE hrdataset
+                            SET DateofHire = CASE
+                                WHEN DateofHire LIKE '%/%' THEN date_format(str_to_date(DateofHire, '%m/%d/%Y'),'%Y-%m-%d')
+                                WHEN DateofHire LIKE '%-%' THEN date_format(str_to_date(DateofHire, '%m-%d-%Y'),'%Y-%m-%d')
+                                ELSE NULL
+                            END;
+
+                            ALTER TABLE hrdataset MODIFY COLUMN DateofHire date;                         
+                        </p>  
+                        <p class="proyect_card-description-code">
+                            SELECT DateofTermination FROM hrdataset;
+
+                            SELECT DateofTermination, CASE
+                                WHEN DateofTermination LIKE '%/%' THEN DATE_FORMAT(STR_TO_DATE(DateofTermination, '%m/%d/%Y'), '%Y-%m-%d')
+                                WHEN DateofTermination LIKE '%-%' THEN DATE_FORMAT(STR_TO_DATE(DateofTermination, '%m-%d-%Y'), '%Y-%m-%d')
+                                ELSE NULL
+                            END AS new_DateofTermination
+                            FROM hrdataset;
+
+                            UPDATE hrdataset
+                            SET DateofTermination = CASE
+                                WHEN DateofTermination LIKE '%/%' THEN date_format(str_to_date(DateofTermination, '%m/%d/%Y'),'%Y-%m-%d')
+                                WHEN DateofTermination LIKE '%-%' THEN date_format(str_to_date(DateofTermination, '%m-%d-%Y'),'%Y-%m-%d')
+                                ELSE NULL
+                            END;
+
+                            ALTER TABLE hrdataset MODIFY COLUMN DateofTermination date;                       
+                        </p>                                                                                                                                                                                                                                     
+                    </div>                                       
+                </div>            
+            </div> 
+            <div class="proyect__bg">   
+                <div class="proyect__container grid">
+                    <div class="proyect__card">
+                        <h4 class="proyect__card-title">Espacio entre números</h4>
+                        <p class="proyect_card-description">
+                            Reemplazaremos datos de una celda
+                        </p>                      
+                    </div>  
+
+                    <div class="proyect__card scroll">
+                        <p class="proyect_card-description-code">
+                            SELECT Salary, TRIM(Salary) AS Salary
+                            FROM hrdataset
+                            WHERE LENGTH(Salary) - LENGTH(TRIM(Salary)) > 0;
+                        </p>                                                                                                                                                                                    
+                    </div>                                       
+                </div>            
+            </div>
+            <div class="proyect__bg">   
+                <div class="proyect__container">
+                    <h4 class="proyect__card-title">Proyecto de limpieza terminado</h4>
+                    <p class="proyect_card-description">
+                        Terminamos la limpieza de datos, para poder realizar el análisis correspondiente. 
+                    </p>                      
+                </div>            
+            </div>       
+        </section>
+  
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer">
+            <p class="footer__copy">Copyright © 2023 Silvana Guardia Z. | Analista de datos</p>
+        </footer>
+
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up"> 
+            <i class="ri-arrow-up-fill scrollup__icon"></i>
+        </a>
+
+        <!--=============== SCROLL REVEAL ===============-->
+        <script src="assets/js/scrollreveal.min.js"></script>
+        
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
