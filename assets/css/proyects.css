@@ -115,6 +115,11 @@ h5{
   min-width: 230px;
 }
 
+.pdf-proyect{
+  min-width: 200px;
+  height: 700px;
+}
+
 
 /*=============== BREAKPOINTS ===============*/
 
@@ -128,5 +133,8 @@ h5{
   .img-grafic{
     width: 400px;
     height: 400px;
+  }
+  .pdf-proyect{
+    min-width: 1040px;
   }
 }

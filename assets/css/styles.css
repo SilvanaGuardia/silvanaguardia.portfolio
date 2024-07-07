@@ -4,7 +4,7 @@
 /*----------------- VARIABLES -----------------*/
 :root{
   --color-black: #111111;  
-  --color-white: #F6F6F6; 
+  --color-white: #f6f6f6f1; 
   --color-grey-light: #DBDBDB;
   --color-lime: #DEED67;  
   --color-violet: #CB9FF4;
@@ -21,7 +21,7 @@
   --h1-font-size: 2.5rem;
   --h2-font-size: 2rem;
   --h3-font-size: 1.5rem;
-  --normal-font-size: .938rem;
+  --normal-font-size: 1rem;
   --small-font-size: .813rem;
   --smaller-font-size: .75rem;
 
@@ -226,6 +226,8 @@ img{
     padding: 4rem 0 0 3rem;
     transition: .3s;
     z-index: 100;
+    font-size: var(--h3-font-size);
+    row-gap: 3em;    
   }
 }
 
@@ -240,7 +242,7 @@ img{
 .nav__list{
   display: flex;
   flex-direction: column;
-  row-gap: 2.5rem;
+  row-gap: 2.5rem;  
 }
 
 .nav__link{
@@ -503,9 +505,10 @@ img{
 
 .skill__container{
   grid-template-columns: repeat(2, 120px);
-  grid-auto-rows: 150px;
+  grid-auto-rows: 120px;
   gap: 1rem;  
   justify-content: center;
+  padding-top: 2rem;
 }
 
 .skill__item{
@@ -519,7 +522,7 @@ img{
 
 .icon__skill{
   color: var(--color-violet);
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
   padding-top: 1.5rem;
 }
@@ -669,13 +672,13 @@ img{
      width: 400px;
   }
   .skill__container{
-    grid-template-columns: repeat(2, 220px);
-    grid-auto-rows: 250px;
-    gap: 1.5rem;  
+    grid-template-columns: repeat(2, 200px);
+    grid-auto-rows: 160px;
+    gap: 1.2rem;  
   }
   .icon__skill{
-    font-size: 4.5rem;
-    padding-top: 3rem;
+    font-size: 3rem;
+    padding-top: 2rem;
   }
   .icon__description{
     padding-bottom: 1.5rem; 
@@ -735,7 +738,7 @@ img{
   .portfolio__container{
     padding: 3rem 5rem;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: 1.8rem 1.5rem;
   }
 }
 
@@ -774,14 +777,14 @@ img{
     padding: 2rem 4rem;
   }
   .skill__data{
-  padding-top: 6rem;
+  padding-top: 4rem;
   }
   .skill__details{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
   .portfolio__description{
-    padding: 0 16rem;
+    padding: 0 10rem;
   }
   .portfolio__container{
     grid-template-columns: repeat(2, 1fr);
@@ -803,7 +806,7 @@ img{
   }
   .portfolio__container{
     padding: 3rem 0;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 240px);
   }
   .home__container,.skill__container,.about__container {
     padding:  0 0rem;
