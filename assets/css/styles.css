@@ -46,7 +46,7 @@
 /* Responsive typography */
 @media screen and (max-width: 968px) {
   :root {
-    --big-font-size: 3rem;
+    --big-font-size: 2.5rem;
     --h1-font-size: 2.5rem;
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
@@ -268,18 +268,15 @@ img{
 
 /*=============== HOME ===============*/
 .home{
-  padding: 2.5rem 0 2rem;
+  padding: 3rem 0 2rem;
 }
 
 .home__container{
-  position: relative;
   row-gap: 2rem;
 }
 
 .img__hero{
-  padding-top: 2rem;
-  display: flex;
-  justify-content: center;
+  padding: 2rem 1rem 2rem;
 }
 
 .home__img{
@@ -640,7 +637,7 @@ img{
     width: 250px;
   }
   .steps__bg, .proyect__bg{
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
   }
   .steps__card, .proyect__card{
     padding: 1.5rem;
