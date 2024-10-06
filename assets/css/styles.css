@@ -3,7 +3,7 @@
 
 /*----------------- VARIABLES -----------------*/
 :root{
-  --color-black: #111111;  
+  --color-black: #19191a;  
   --color-white: #f6f6f6f1; 
   --color-grey-light: #DBDBDB;
   --color-lime: #DEED67;  
@@ -280,7 +280,7 @@ img{
 }
 
 .home__img{
-  max-height: 350px;
+  max-height: 400px;
 }
 
 .home__title{
@@ -755,7 +755,7 @@ img{
     padding: 9rem 0 6rem;
   }
   .home__img{
-    width: 350px;
+    width: 500px;
   }
   .home__description{
     padding-right: 5rem;
@@ -803,7 +803,7 @@ img{
   }
   .portfolio__container{
     padding: 3rem 0;
-    grid-template-columns: repeat(3, 240px);
+    grid-template-columns: repeat(4, 240px);
   }
   .home__container,.skill__container,.about__container {
     padding:  0 0rem;
