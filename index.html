@@ -1,314 +1,258 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">    
+    <!--=============== REMIX ICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <!--=============== FAVICON ===============-->
-        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
 
-        <!--=============== REMIX ICONS ===============-->
-        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="assets/css/styles.css">  
+    <title>portfolio</title>
+  </head>
+  <body>
+        <!--====================  ====================-->
+        <main class="main__container">
+            <section class="steps">
+                  <article class="about">
+                      <img src="assets/img/img_cv.png" alt="">
+                      <div class="about__content">
+                          <h1>Silvana Guardia</h1>
+                          <h4 class="about_caption">Business Intelligence</h4>
+                          <p>Transformo datos en insights valiosos para optimizar la toma de decisiones estratégicas</p>
+                      </div>
+                      <div class="contact">
+                          <a class="ri-mail-fill icons-contact" href="mailto:direccion@email.com"></a>
+                          <a href="https://github.com/SilvanaGuardia" class="ri-github-fill icons-contact"></a>
+                          <a class="ri-whatsapp-fill icons-contact" href= "https://wa.me/959390964" ></a>
+                      </div>
+                  </article>
 
-        <!--=============== CSS ===============-->
-        <link rel="stylesheet" href="assets/css/styles.css">
+                  <article class="skills">
+                      <div class="title__skills">
+                          <h2>Habilidades:</h2>  
+                      </div>   
+                      <div class="skills__container">               
+                          <di class="items__skills">
+                              <i></i>
+                              <span>SQL</span>
+                          </di>
+                          <div class="items__skills">
+                              <i></i>
+                              <span>Python</span>
+                          </div>
+                          <div class="items__skills">
+                              <i></i>
+                              <span>PowerBI</span>
+                          </div>
+                          <div class="items__skills">
+                              <i></i>
+                              <span>Excel</span>
+                          </div>
+                          <div class="items__skills">
+                              <i></i>
+                              <span>Tableau</span>
+                          </div>
+                          <div class="items__skills">
+                              <i></i>
+                              <span>R</span>
+                          </div>
+                          <div class="items__skills">
+                              <i></i>
+                              <span>MySQL</span>
+                          </div>
+                          <div class="items__skills">
+                              <i></i>
+                              <span>Looker</span>
+                          </div>
+                          <div class="items__skills">
+                              <i></i>
+                              <span>Analysis</span>
+                          </div>
+                      </div>  
+                  </article>
 
-        <title>silvanaguardia.portfolio</title>
-    </head>
-    <body>
+                  <article class="education">   
+                      <div class="social__container">
+                          <a class="fa-brands fa-tiktok icons__social" href="https://www.tiktok.com/@silvidata?_t=ZM-8xeeAB0V0bQ&_r=1"></a>
+                          <a class="ri-twitter-fill icons__social" href="https://x.com/SilviData"></a>
+                          <a class="ri-instagram-fill icons__social" href="https://www.instagram.com/silvidata/"></a>
+                          <a class="ri-behance-fill icons__social" href="https://www.behance.net/silvanaguardia"></a>
+                      </div>
 
-        <!--==================== HEADER ====================-->
-        <header class="header" id="header">
-            <nav class="nav container">
-                <a href="file:///C:/Users/PC/Desktop/PROYECTOS-SIL/Bento-Frontend/portafolio%20frontend/index.html" class="nav__logo">
-                    <i class="ri-bar-chart-2-fill"></i> Silvana.G
-                </a>
+                      <div class="education__container">
+                          <div class="education__content">
+                              <h2 class="title__education">Educación:</h2>
+                              <div class="education__items">
+                                  <div class="education-item">
+                                    <h4>Computación e Informática</h4>
+                                    <p class="education-parrafo">Instituto Sise - Estudiante 2025</p>
+                                  </div>  
+                                  <div class="education-item">
+                                    <h4>Business Intelligence Analyst</h4>
+                                    <p class="education-parrafo">Platzi - 2024</p>
+                                  </div> 
+                                  <div class="education-item">
+                                    <h4>Análisis de Datos</h4>
+                                    <p class="education-parrafo">Programa one5 - Alura/Oracle - 2023</p>
+                                  </div>                                                                     
+                              </div>
+                          </div>                          
+                      </div>           
+                  </article>
 
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item">
-                            <a href="#home" class="nav__link active-link">Inicio</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#about" class="nav__link">Sobre mí </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#skills" class="nav__link">Skills</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#portfolio" class="nav__link">Portafolio</a>
-                        </li>
-                    </ul>
-                                     
-                    <div class="nav__close" id="nav-close">
-                        <i class="ri-close-circle-fill"></i>
-                    </div>
-                </div>
+                  <article class="services">
+                        <div class="services__container">
+                            <h2 class="title__services">Servicios:</h2>
+                            <div class="services__content">
+                                <div class="service__item">
+                                    <h4>Data Analysis</h4>
+                                    <p>Convierto datos en ideas clave para mejores decisiones.</p>
+                                </div>
+                                <div class="service__item">
+                                    <h4>Database Management</h4>
+                                    <p>Aseguro la integridad y disponibilidad de tu información.</p>
+                                </div>
+                                <div class="service__item">
+                                    <h4 >Business Intelligence</h4>
+                                    <p>Transformo datos en informes útiles.</p>
+                                </div>
+                                <div class="service__item">
+                                    <h4>Data Visualization</h4>
+                                    <p>Creo gráficos claros para entender datos complejos.</p>                                
+                                </div>
+                            </div>
+                        </div>
+                  </article>
+            </section>
 
-                <div class="nav__btns">
-                    <div class="nav__toggle" id="nav-toggle">
-                        <i class="ri-layout-grid-fill"></i>
-                    </div>
-                </div>
-            </nav>
-        </header>
+            <section class="portfolio">
+                <div><h2 class="title__portfolio">Projectos</h2></div>
 
-        <!--==================== HERO ====================-->
+                <div class="portfolio__container">
+                    <article class="portfolio__item">
+                        <img src="assets/img/003-employee-growth.png" alt="" class="icon-project">
+                        <div class="expanded-content">
+                            <h4>Descripción del Proyecto</h4>
+                            <p>Este proyecto consiste en un análisis detallado de la rotación de personal, utilizando un conjunto de datos de Kaggle. El objetivo principal fue identificar patrones y factores clave que contribuyen a la rotación de empleados para ayudar al departamento de Recursos Humanos a desarrollar estrategias de retención más efectivas.</p>
+                            
+                            <h4>Resultados Obtenidos</h4>
+                            <ul>
+                                <li>Identificación de los principales factores que influyen en la rotación de personal (e.g., salario, satisfacción laboral, horas extras, etc.).</li>
+                                <li>Desarrollo de visualizaciones claras en Tableau que permiten al departamento de RRHH monitorear las tendencias de rotación.</li>
+                                <li>Provisión de información actionable para diseñar iniciativas de retención de talento más dirigidas y eficientes.</li>
+                            </ul>
+                            
+                            <h4>Herramientas Utilizadas</h4>
+                            <ul>
+                                <li>Python para la limpieza, análisis exploratorio de datos y modelado estadístico.</li>
+                                <li>Librerías de Python: Pandas (para manipulación de datos), Matplotlib y Seaborn (para visualización).</li>
+                                <li>Tableau para la creación de un dashboard interactivo que resume los hallazgos clave.</li>
+                            </ul>
+                            
+                           <h4>Link del proyecto</h4>
+                            <ul>
+                                <a href="https://public.tableau.com/app/profile/silvana.guardia/viz/HumanResources_17502275017690/Dashboard" class="link-project">Tableau</a>
+                                <a href="https://github.com/SilvanaGuardia/Analisis-de-rotaci-n-de-personal" class="link-project">Github</a>   
+                            </ul>   
+                            
+                            <div>
+                                <img src="assets/img/rrhh.PNG" alt="" class="img-proyect">
+                            </div>
+                        </div>                        
+                    </article>
 
-        <section class="home" id="home">
-            <div class="home__container container grid">
-                <div class="home__data">
-                    <h2 class="home__title">
-                        Transformando Datos en Estrategias<br>
-                    </h2>
-                    <p class="home__description">
-                        Mi objetivo es proporcionar insights
-                        claros y precisos que impulsen el 
-                        crecimiento y la toma de decisiones informadas. 
-                        Descubre cómo puedo ayudarte a aprovechar el poder 
-                        de los datos para transformar tu negocio.                       
-                    </p>
-                    <a href="https://wa.me/message/2DF46KVZKQ4QH1" class="button button--flex button__one">
-                        Contáctame  
-                    </a>                   
-                </div>
-                <div class="img__hero">
-                    <img src="assets/img/home.png" alt="" class="home__img">
-                </div>
-            </div>
-        </section>
-        
-        <!--==================== SERVICES ====================-->        
-        <section class="steps container">
-            <div class="steps__bg">
-
-                <div class="steps__container grid">
-                    <div class="steps__card">
-                        <div class="steps__card-number"><i class="ri-line-chart-fill steps__icons"></i></div>
-                        <h4 class="steps__card-title">Visualización</h4>
-                        <p class="steps__card-description">
-                            Elementos visuales con el objetivo 
-                            de comunicar de manera clara y efectiva.
-                        </p>
-                    </div>
-
-                    <div class="steps__card">
-                        <div class="steps__card-number"><i class="ri-database-2-fill steps__icons"></i></div>
-                        <h4 class="steps__card-title">Limpieza de datos</h4>
-                        <p class="steps__card-description">
-                            Identificar y corregir errores, inconsistencias, omisiones en un conjunto de datos.                         
-                        </p>
-                    </div>                     
-
-                    <div class="steps__card">
-                        <div class="steps__card-number"><i class="ri-pie-chart-2-fill steps__icons"></i></div>
-                        <h4 class="steps__card-title">Dashboards</h4>
-                        <p class="steps__card-description">
-                            Monitoreo de datos de ventas, 
-                            seguimiento de indicadores de desempeño.
-                        </p>
-                    </div>                   
-                </div>
-            </div>
-        </section>
-        
-        <!--==================== ABOUT ====================-->
-        <section class="about container" id="about">
-            <div class="about__container grid">
-                <div class="about__container">
-                    <h3 class="about__title">
-                        Silvana Guardia,<br>BI Analyst
-                    </h3>                 
-                    <p class="about__description">
-                        Soy un analista en Business Intelligence 
-                        , dedicado a convertir datos complejos 
-                        en estrategias accionables. Con experiencia en herramientas 
-                        de análisis como Power BI, Tableau y Excel.
-                    </p>
-                    <div class="about__details">
-                        <p class="about__details-description">
-                            <a class="ri-behance-fill icon__social" href="https://www.behance.net/silvanaguardia"target="_blank"></a>
-                            <a class="ri-linkedin-fill icon__social" href="https://www.linkedin.com/company/103997061/admin/dashboard/"target="_blank"></a>
-                            <a class="ri-github-fill icon__social" href="https://github.com/SilvanaGuardia"target="_blank"></a>
-                        </p>
-                    </div>                                      
-                </div>
-
-                <img src="assets/img/perfil.png" alt="" class="about__img">                
-            </div>
-        </section>
-
-        <!--==================== SKILLS ====================-->
-        <section class="skill__section section" id="skills">
-            <div class="skill__details container">
-                <div class="skill__container grid">
-                    <div class="skill__item">
-                        <i class="ri-database-2-fill icon__skill"></i>
-                        <p class="icon__description">
-                            SQL 
-                        </p>
-                    </div>
-                    <div class="skill__item">
-                        <i class="ri-file-excel-2-fill icon__skill"></i>
-                        <p class="icon__description">
-                            Excel 
-                        </p>
-                    </div>
-                    <div class="skill__item">
-                        <i class='bx ri-bar-chart-box-fill icon__skill'></i>
-                        <p class="icon__description">
-                            Tableau 
-                        </p>
-                    </div>
-                    <div class="skill__item">
-                        <i class="ri-bar-chart-fill icon__skill"></i>
-                        <p class="icon__description">
-                            Power BI 
-                        </p>
-                    </div>
+                    <article class="portfolio__item">
+                        <img src="assets/img/003-70-20-10-rule.png" alt="" class="icon-project">
+                        <div class="expanded-content">
+                            <h4>Descripción del Proyecto</h4>
+                            <p>Este proyecto detalla la creación de un Dashboard de Super Store interactivo, enfocado en el análisis de ventas y rendimiento. Se realizó una fase de limpieza y preparación de datos utilizando SQL para asegurar la calidad y consistencia de la información antes de la visualización en Power BI.</p>
+                            
+                            <h4>Resultados Obtenidos</h4>
+                            <ul>
+                                <li>Visualización clara y concisa de métricas clave de ventas y rentabilidad.</li>
+                                <li>Mejora en la capacidad de análisis de tendencias y patrones de compra.</li>
+                                <li>Optimización en la toma de decisiones estratégicas a partir de datos fiables y organizados.</li>
+                            </ul>
+                            
+                            <h4>Herramientas Utilizadas</h4>
+                            <ul>
+                                <li>Power BI para visualización y creación del dashboard interactivo</li>
+                                <li>SQL para la limpieza y preparación de datos</li>
+                            </ul>
+                            
+                            <div>
+                                <img src="assets/img/sales.JPG" alt="" class="img-proyect">
+                            </div>                          
+                        </div>                        
+                    </article>
                     
-                </div>  
-
-                <div class="skill__data">
-                    <h3 class="skill__title">
-                       Herramientas de  <br> análisis de datos
-                    </h3>
-                    <p class="skill__description">
-                        Las herramientas son una parte importante del proceso de análisis 
-                        de datos y pueden ayudar a las empresas a tomar decisiones 
-                        informadas basadas en información precisa y relevante.
-                    </p>                                  
-                </div>           
-            </div>
-        </section>
-
-        <!--==================== PORTFOLIO ====================-->
-        <section class="portfolio section container" id="portfolio">
-            <h3 class="section__title-center">
-                Portafolio
-            </h3>
-
-            <p class="portfolio__description">
-                Recopilación de trabajos, proyectos que demuestran mis habilidades, conocimientos 
-                y logros como Analista de Datos.   
-            </p>
-
-            <div class="portfolio__container grid">
-
-                <div class="portafolio__item item-5"  onclick="location.href='limpiezadedatos.html'">
-                    <div class="card__img">
-                        <img src="assets/img/001-adaptive-learning.png" class="img__portfolio">
-                    </div>
-                    <div class="card__content">
-                        <h3 class="card__title">Limpieza de Datos & Dashboard</h3>
-                        <p class="card__description">
-                            En este proyecto se ha realizado la limpieza de los datos.                        
-                        </p>
-                        <ul class="lenguaje">
-                            <li>SQL</li>
-                            <li>Tableau</li>
-                        </ul>                    
-                    </div>
-                </div>
-                <!--  
-                <div class="portafolio__item item-6"  onclick="location.href='analisisdedatos.html'">
-                    <div class="card__img">
-                        <img src="assets/img/002-learning-and-development.png" class="img__portfolio">
-                    </div>
-                    <div class="card__content">
-                        <h3 class="card__title">Analisis De Ventas</h3>
-                        <p class="card__description">
-                            Proyecto completo de análisis de Datosde las ventas del retail Zara
-                        </p>
-                        <ul class="lenguaje">
-                            <li>Python</li>
-                            <li>PowerBi</li>
-                        </ul>
-                    </div>                  
-                </div>  
-                -->              
-                <!--  
-                <div class="portafolio__item item-1" onclick="location.href='excel.html'">
-                    <div class="card__img">
-                        <img src="assets/img/001-development.png" class="img__portfolio">
-                    </div>
-                    <div class="card__content">
-                        <h3 class="card__title">Dashboard Excel</h3>
-                        <p class="card__description">
-                            Este proyecto destaca el poder de Excel para analizar datos clínicos.
-                        </p>
-                        <ul class="lenguaje">
-                            <li>Excel</li>
-                        </ul> 
-                    </div>                 
+                    <article class="portfolio__item">
+                        <img src="assets/img/grafico-circular.png" alt="" class="icon-project">
+                        <div class="expanded-content">
+                            <h4>Descripción del Proyecto</h4>
+                            <p>Este proyecto consiste en un análisis detallado de los datos de ventas de perfumes de mujer en la plataforma eBay. El objetivo principal es identificar patrones de venta, productos populares, tendencias de precios y preferencias de los clientes, con el fin de proporcionar información valiosa para optimizar las estrategias de venta y mejorar la comprensión del mercado de perfumes en línea.</p>
+                            
+                            <h4>Resultados Obtenidos</h4>
+                            <ul>
+                                <li>Identificación de las principales tendencias y patrones de ventas a lo largo del tiempo (ej. picos estacionales, días/horas de mayor venta).</li>
+                                <li>Análisis de los perfumes, marcas y categorías más vendidas en eBay.</li>
+                                <li>Desarrollo de visualizaciones claras e interactivas en Tableau para monitorear el rendimiento de las ventas y detectar oportunidades.</li>
+                            </ul>
+                            
+                            <h4>Herramientas Utilizadas</h4>
+                            <ul>
+                                <li>Excel para la limpieza de datos, organización y análisis preliminar.</li>
+                                <li>Tableau para la creación de un dashboard interactivo y visualizaciones que resumen los hallazgos clave.</li>
+                            </ul>
+                            
+                           <h4>Link del proyecto</h4>
+                            <ul>
+                                <a href="https://public.tableau.com/app/profile/silvana.guardia/viz/ebay_womens_perfume_17513300806640/Dashboard3?publish=yes" class="link-project">Tableau</a>   
+                            </ul>   
+                            
+                            <div>
+                                <img src="assets/img/perfumes.PNG" alt="" class="img-proyect">
+                            </div>                        
+                        </div>                        
+                    </article>
+                    
+                    <article class="portfolio__item">
+                        <img src="assets/img/001-adaptive-learning.png" alt="" class="icon-project">
+                        <div class="expanded-content">
+                            <h4>Descripción del Proyecto</h4>
+                            <p>Este proyecto se centró en el análisis de casos de cáncer de tiroides, con el objetivo de identificar patrones y características relevantes de los pacientes. Se realizó una exhaustiva limpieza y preparación de los datos en Excel para asegurar la calidad y consistencia de la información antes de proceder a la visualización.</p>
+                            
+                            <h4>Resultados Obtenidos</h4>
+                            <ul>
+                                <li>Organización y estandarización de un conjunto de datos complejos sobre casos de cáncer de tiroides.</li>
+                                <li>Creación de visualizaciones claras y accesibles en Power BI que facilitan la comprensión de las tendencias y características de la enfermedad.</li>
+                                <li>Mejora en la capacidad de identificar posibles correlaciones y factores de riesgo, apoyando así la investigación y el entendimiento de la enfermedad.</li>
+                            </ul>
+                            
+                            <h4>Herramientas Utilizadas</h4>
+                            <ul>
+                                <li>Microsoft Excel para la limpieza, organización y procesamiento inicial de los datos.</li>
+                                <li>Power BI para la creación de un dashboard interactivo, permitiendo una visualización y exploración dinámica de los datos relacionados con los casos de cáncer de tiroides.</li>
+                            </ul>
+                            
+                            <div>
+                                <img src="assets/img/Thyrod.png" alt="" class="img-proyect">
+                            </div>                          
+                        </div>                        
+                    </article>                    
                 </div> 
-                -->
-                <div class="portafolio__item item-7" onclick="location.href='dashboard.html'">
-                    <div class="card__img">
-                        <img src="assets/img/003-70-20-10-rule.png" class="img__portfolio">
-                    </div>
-                    <div class="card__content">
-                        <h3 class="card__title">Dashboard Supermarket</h3>
-                        <p class="card__description">
-                            Visaulización de datos de las ventas de un Supermarket
-                        </p>
-                        <ul class="lenguaje">
-                            <li>Excel</li>
-                            <li>PowerBi</li>
-                        </ul>                         
-                    </div>                 
-                </div>                
+            </section>
 
-                <div class="portafolio__item item-8" onclick="location.href='tableau.html'">
-                    <div class="card__img">
-                        <img src="assets/img/002-case-study.png" class="img__portfolio">
-                    </div>
-                    <div class="card__content">
-                        <h3 class="card__title">Dashboard de Prevención</h3>
-                        <p class="card__description">
-                            Proyecto para conocer más sobre el cáncer de Tiroides
-                        </p>
-                        <ul class="lenguaje">
-                            <li>Excel</li>
-                            <li>PowerBi</li>
-                        </ul> 
-                    </div>                 
-                </div>   
-
-                <div class="portafolio__item item-3" onclick="location.href='looker.html'">
-                    <div class="card__img">
-                        <img src="assets/img/negocio.png" class="img__portfolio">
-                    </div>
-                    <div class="card__content">
-                        <h3 class="card__title">Dashboard Ventas Ebay</h3>
-                        <p class="card__description">
-                            Visualización de datos, ventas de perfumes en Ebay
-                        </p>
-                        <ul class="lenguaje">
-                            <li>Excel</li>
-                            <li>Tableau</li>
-                        </ul> 
-                    </div>                 
-                </div>                  
-                               
-            </div>
-        </section>       
-
-        <!--==================== FOOTER ====================-->
-        <footer class="footer">
-            <p class="footer__copy">Copyright © 2024 Silvana Guardia Z. | Datos</p>
-        </footer>
-
-        <!--=============== SCROLL UP ===============-->
-        <a href="#" class="scrollup" id="scroll-up"> 
-            <i class="ri-arrow-up-fill scrollup__icon"></i>
-        </a>
-
-        <!--=============== SCROLL REVEAL ===============-->
-        <script src="assets/js/scrollreveal.min.js"></script>
+            <footer>
+                <p>Copyright ©2025 Silvana Guardia Z.</P>
+            </footer>
+        </main>
         
         <!--=============== MAIN JS ===============-->
-        <script src="assets/js/main.js"></script>
-    </body>
+        <script src="assets/js/main.js"></script>      
+  </body>
 </html>
