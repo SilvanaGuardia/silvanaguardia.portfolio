@@ -3,13 +3,13 @@
 
 /*----------------- VARIABLES -----------------*/
 :root{
-  --color-black: #111010;  
-  --color-black-light: #1E1E1E;
+  --color-black: #EAEAE8;  
+  --color-black-light: #EAEAE8;   
   --color-white: #e7e7e7; 
-  --color-grey-light: #c3c3c5;  
-  --color-grey: #858588;
-  --color-lime: #DEED67;  
-  --color-violet: #CB9FF4;
+  --color-grey-light: #222222;  
+  --color-grey: #4e4e4e;
+  --color-lime: #447EF2;  
+  --color-violet: #14A670;
 }
 
 /*=============== VARIABLES CSS ===============*/
@@ -65,13 +65,13 @@ button{
 h1{
   font-size: var(--h1-font-size);
   font-weight: 600;
-  color: var(--color-white);
+  color: var(--color-grey-light);
 }
 
 h2{
   font-size: var(--h2-font-size);
   font-weight: 500;
-  color: var(--color-white);
+  color: var(--color-grey-light);
 }
 
 h3{
@@ -119,6 +119,7 @@ p{
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
+  box-shadow: 0 6px 10px rgba(15, 40, 107, 0.158);
 }
 
 .about__content{
@@ -133,6 +134,13 @@ p{
   padding-bottom: .7rem;
 }
 
+.img_perfil{
+  width: 120px;
+  border-radius: 50%;
+  border: #447EF2 solid 3px;
+  box-shadow: 5px;
+}
+
 .contact{
   display: flex;
   gap: 1rem;  
@@ -141,19 +149,19 @@ p{
 .icons-contact{
   color: var(--color-lime);
   font-size: 1.5rem;
-  padding:.9rem;
+  padding:.8rem .9rem;
   background-color: var(--color-black);
   border-radius: 50%;
-  border: #DEED67 1px solid;
+  border: #447EF2 1px solid;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .icons-contact:hover {
-  background: #DEED67;
+  background: #447EF2;
   color: #1a1a1a;
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(251, 255, 0, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 68, 255, 0.3);
 }
 
 /*=============== SKILLS ===============*/
@@ -176,16 +184,14 @@ p{
 
 .items__skills{
   border-radius: 1px;
-  border: #DEED67 solid 2px;
-  box-shadow: 3px 3px #DEED67; 
+  border: #447EF2 solid 2px;
+  box-shadow: 3px 3px #447EF2; 
   height: auto;
   display: grid;
   justify-content: center;
   align-items: center;
   padding: 1.5rem 1.2rem;
   border-radius: .6rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
   position: relative;
   overflow: hidden;  
 }
@@ -197,19 +203,10 @@ p{
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 238, 0, 0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(0, 26, 255, 0.2), transparent);
   transition: left 0.5s ease;
 }
 
-.items__skills:hover::before {
-  left: 100%;
-}
-
-.items__skills:hover {
-  border-color: #DEED67;
-  background: rgba(229, 255, 0, 0.2);
-  transform: translateY(-2px);
-}
 
 span{
   font-size: var(--small-font-size);
@@ -237,25 +234,27 @@ span{
   background-color: var(--color-black);
   min-width: 250px;
   height: auto;  
-  padding: 1.2rem 1.2rem;
+  padding: 1.2rem 1.3rem;
   border-radius: 1.5rem;  
   gap: 1.5rem;
+  box-shadow: 0 5px 10px rgba(15, 40, 107, 0.158);
 }
 
 .icons__social{
   color: var(--color-violet);
-  font-size: 1rem;
-  padding: .7rem .7rem;
+  font-size: 1.4rem;
+  padding: .5rem .6rem;
   background-color: var(--color-black);
   border-radius: 50%;
-  border: #CB9FF4 1px solid;
+  border: #14A670 1px solid;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .icons__social:hover {
-  background: rgba(162, 76, 184, 0.575);
+  background: #14A670;
   transform: translateY(5px);
+  color: var(--color-grey-light);
 }
 
 
@@ -267,6 +266,7 @@ span{
   height: auto;  
   padding: 2rem 1.5rem .5rem 1.5rem;
   border-radius: 1.5rem;  
+  box-shadow: 0 5px 10px rgba(15, 40, 107, 0.158);
 }
 
 .title__item, .title__education,.title__services{
@@ -281,7 +281,7 @@ span{
 
 .education-item{
   width: 220px;
-  border-bottom: 1px solid #DEED67;
+  border-bottom: 3px solid #447EF2;
 }
 
 .education-parrafo{
@@ -296,16 +296,10 @@ span{
 }
 
 .service__item{
-  border-left: 3px solid #DEED67;
+  border-left: 3px solid #447EF2;
   padding-left: .7rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
 }
 
-.service__item:hover {
-  color: var(--color-lime);
-  border-left: 3px solid #DEED67;
-}
 
 /*=============== PORTFOLIO ===============*/
 .portfolio{
@@ -317,6 +311,7 @@ span{
   background-color: var(--color-black);
   margin: 0rem 2rem .5rem 2rem;
   border-radius: 1.8rem;
+  box-shadow: 0 6px 10px rgba(15, 40, 107, 0.158);
 }
 
 .portfolio__container{
@@ -328,10 +323,10 @@ span{
 .portfolio__item{
   background-color: var(--color-black);
   min-width: 230px;
-  height: 250px; 
+  height: 140px; 
   padding: 2rem 1.2rem;
   border-radius: 1.5rem;
-  border: #DEED67 2px solid;
+  border: #447EF2 4px solid;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;  
@@ -345,7 +340,7 @@ span{
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, #DEED67, #dcf13b);
+  background: linear-gradient(90deg, #447EF2, #2f68d8);
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }  
@@ -357,31 +352,22 @@ span{
 .portfolio__item:hover {
   border-color: var(--color-lime);
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(251, 255, 0, 0.1);
-}
-
-.title__portfolio{
-  transition: transform 0.3s ease;
-}
-
-.title__portfolio:hover{
-  cursor: pointer;
-  color: var(--color-lime);
+  box-shadow: 0 10px 30px rgba(0, 17, 255, 0.1);
 }
 
 .icon-project{
   position: absolute;
-  top: 3rem;
-  right: 2.5rem;
-  width: 150px;
+  top: 1.2rem;
+  right: 3.7rem;
+  width: 100px;
 }
 
+
+/*=============== EXPANDIR ===============*/
 .portfolio__item.expanded .icon-project{
     display: none !important;
 }
 
-/*=============== EXPANDIR ===============*/
-/* Estado expandido */
 .portfolio__item.expanded {
     position: fixed;
     top: 5%;
@@ -425,7 +411,7 @@ span{
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
-    color: #e5e5e5;
+    color: #EAEAE8;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -437,8 +423,19 @@ span{
     visibility: visible;
 }
 
+.title__portfolio{
+  color: var(--color-grey-light);
+  font-size: var(--h1-font-size);
+}
+
+.title__item{
+  color: var(--color-grey-light);
+  font-size: var(--h1-font-size);
+  margin-bottom: 1rem;
+}
+
 .expanded-content h4 {
-    color: var(--color-grey-light);
+    color: var(--color-grey);
     font-size: 1.4rem;
     margin-bottom: 1rem;
     margin-top: 2rem;
@@ -477,19 +474,13 @@ span{
 
 .img-proyect{
   width: 100%;
-  padding-top: 3rem;
-  padding-bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 2.5rem;
 }
 
 a{
   list-style: none;
   text-decoration: none;
-  color: var(--color-white);
-}
-
-.link-project:hover{
-  color: var(--color-violet);
-
 }
 
 /* Botón de cierre */
@@ -515,20 +506,7 @@ a{
     transform: rotate(90deg);
 }
 
-/* Título del proyecto cuando está expandido */
-.project-title {
-    font-size: 2rem;
-    color: var(--color-white);
-    margin-bottom: 1rem;
-    text-align: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease 0.2s;
-    flex-shrink: 0;
-    padding-top: 1rem;
-}
-
-.portfolio__item.expanded .project-title {
+.portfolio__item.expanded{
     opacity: 1;
     visibility: visible;
 }
@@ -555,20 +533,20 @@ a{
 }
 
 .portfolio__item.expanded::-webkit-scrollbar-thumb {
-    background: linear-gradient(45deg, #DEED67, #DEED67);
+    background: linear-gradient(45deg, #447EF2, #447EF2);
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(74, 222, 128, 0.3);
+    box-shadow: 0 2px 10px rgba(76, 74, 222, 0.3);
 }
 
 .portfolio__item.expanded::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(45deg, #DEED67, #DEED67);
-    box-shadow: 0 2px 15px rgba(74, 222, 128, 0.5);
+    background: linear-gradient(45deg, #447EF2, #447EF2);
+    box-shadow: 0 2px 15px rgba(74, 101, 222, 0.5);
 }
 
 /* Para Firefox */
 .portfolio__item.expanded {
     scrollbar-width: thin;
-    scrollbar-color: #DEED67 rgba(56, 59, 36, 0.877);
+    scrollbar-color: #447EF2 rgba(36, 46, 59, 0.877);
 }
 
 /*=============== FOOTER ===============*/
@@ -579,17 +557,13 @@ footer{
 
 /*=============== BREAKPINT ===============*/
 @media screen and (min-width: 320px){
-    .project-title {
-      padding-top: 2.5rem;
-  }
   .portfolio__item{
     width: 200px;
   }
   .portfolio__item.expanded {
       top: 2%;
       width: 80%;
-  }
-   
+  }   
 }
 
 @media screen and (min-width: 767px){
@@ -597,8 +571,6 @@ footer{
   }
   .steps{
     grid-template-columns: repeat(2, 280px);
-  }
-  .portfolio{  
   }
   .portfolio__container{
     grid-template-columns: repeat(2, 250px);
@@ -615,10 +587,6 @@ footer{
     .expanded-content {
         padding: 1.5rem;
     }
-    
-    .project-title {
-        font-size: 1.5rem;
-    } 
 }
 
 
@@ -627,17 +595,11 @@ footer{
   }
   .steps{
     grid-template-columns: repeat(4, 280px);
-  }
-  .portfolio{  
-  }
+  } 
   .portfolio__container{
     grid-template-columns: repeat(4, 250px);
   }
   .expanded-content {
-      padding: 1rem;
+      padding: 1rem 2rem;      
   }  
-}
-
-@media screen and (min-width: 1200px){
-
 }
